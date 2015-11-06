@@ -23,3 +23,10 @@ pointer with its value storing an address of a function.
     ``` C
         double dRet = pf(3);
     ```
+    
+> * typically, typedef is used to define a function pointer:
+    ``` C
+        typedef double(*MYFUN)(int);
+        MYFUN pf1 = pam;
+        MYFUN pf2 = pam;
+    ```
