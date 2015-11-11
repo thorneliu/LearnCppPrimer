@@ -4,12 +4,12 @@
     C++的变量初始化有两种方式：复制初始和直接初始化。复制初始化语法用等号（=）
     直接初始化则是把初始化表达式放在括号中
 
-    ``` C
-        int ival(1024);  //direct init
-        int ival = 1024; // copy init 
-    ```
+``` C
+    int ival(1024);  //direct init
+    int ival = 1024; // copy init 
+```
 
-    **初始化不是赋值**
+**初始化不是赋值**
 
 ###2 变量的初始化规则
     
@@ -18,8 +18,8 @@
 
     类类型的初始化。类通过构造函数来初始化，如果一个类在初始化的时候没有提供初始化式，则调用默认初始化函数。
 
-    ``` C
-        string str; // str is init as "", a empty string
-    ```
+``` C
+    string str; // str is init as "", a empty string
+```
 
 
