@@ -24,7 +24,7 @@ getline函数的返回值为输入流对象，和输入操作符>>一样，把�
            cout << line << endl;
        return 0;
    }
-```C
+```
 
 ##3 string 的拼接 
 string的加法被定义为连接  
@@ -34,7 +34,7 @@ string的加法被定义为连接
     string s2 = "world";
     string s3 = s1 + ", ";
     string s4 = "hello" + ", "; //error, no string 操作数
-```C
+```
 
 #4 vector
 
@@ -42,11 +42,11 @@ string的加法被定义为连接
     vector 不是一种数据类型，她是一种类模板
 ```C
     vector<T> Tvec; // Tvec hold objects of type T
-```C
+```
 
 *vector的下标操作是不能添加元素的*
 ```C
     vector<int> ivec; //empty vector
     for(vector<int>::size_type ix = 0; i != 10; ix++)
         ivec[ix] = ix; // error, ivec has no elements
-```C
+```
