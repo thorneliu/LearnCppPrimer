@@ -43,3 +43,10 @@ string的加法被定义为连接
 ```C
     vector<T> Tvec; // Tvec hold objects of type T
 ```C
+
+*vector的下标操作是不能添加元素的*
+```C
+    vector<int> ivec; //empty vector
+    for(vector<int>::size_type ix = 0; i != 10; ix++)
+        ivec[ix] = ix; // error, ivec has no elements
+```C
