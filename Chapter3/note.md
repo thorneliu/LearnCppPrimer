@@ -57,3 +57,42 @@ string的加法被定义为连接
     vector<int>::interator iter;
     string::interator iter;
 ```
+
+由end操作返回的迭代器指向vector的“末端元素的下一个”, 由end操作
+返回的迭代器并不指向任何实际的元素，相反，它只是一个哨兵的作用。
+迭代器类型可以使用解引用运算符(\*)来访问迭代器指向的元素。
+```C
+    *iter = 0;
+```
+
+##5 const_iterator
+    const_iterator的类型只能用于读取容器内元素，但不能改变其值。但不要将const——iterator和const的iterator
+混淆。const的iterator将只能指向某一个确定的元素，不能访问不同的元素。
+```C
+    vector<int>::const_iterator iter;
+	*iter = 10; //error, the *iter value could not be changed, its read only
+
+	cont vector<int>::iterator iter2 = ivec.begin();
+	iter2++; // error, could not change const iterator's reference
+```
+
+#6 bitset
+bitset是一种类模板，但是bitset类型对象的区别仅仅在于
+其长度不同
+```C
+    bitset<n> b; //长度为n的biset类型
+    bitset<m> b; //长度为m的bitset类型
+```
+
+bitset对象的初始化方法:
+```C
+    bitset<n> b;
+    bitset<n> b(u); 
+    bitset<n> b(s);
+    bitset<n> b(s, pos, n);
+
+
+    string strval("1100");
+    bitset<32> bitvec4(strval); // bitset: 0011
+    //string对象和bitset对象之间是反向转化的：strign对象的最右边字符用来初始化bitset对象的低阶位
+```
