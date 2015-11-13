@@ -50,3 +50,10 @@ string的加法被定义为连接
     for(vector<int>::size_type ix = 0; i != 10; ix++)
         ivec[ix] = ix; // error, ivec has no elements
 ```
+
+#5 迭代器
+每种容器类型都定义了自己的迭代器类型, 如vector:
+```C
+    vector<int>::interator iter;
+    string::interator iter;
+```
