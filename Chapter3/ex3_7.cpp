@@ -14,7 +14,7 @@ int main()
     getline(cin,str2);
 
     //chekc if they are equal
-    if (str1 ==  str2)
+    if (str1 == str2)
     {
         cout << "str1 == str2" << endl;
     }
