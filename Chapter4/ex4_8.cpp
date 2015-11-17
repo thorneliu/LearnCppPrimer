@@ -13,50 +13,55 @@ int main()
     int c[] = {1, 2, 3, 4};
     int d[] = {1, 2, 3, 4, 5};
 
-    cout << CompareTwoArray(a, b, sizeof(a)/sizeof(int), sizeof(b)/sizeof(int)) << endl;
-    cout << CompareTwoArray(a, c, sizeof(a)/sizeof(int), sizeof(c)/sizeof(int)) << endl;
-    cout << CompareTwoArray(a, d, sizeof(a)/sizeof(int), sizeof(d)/sizeof(int)) << endl;
+    //cout << CompareTwoArray(a, b, sizeof(a)/sizeof(int), sizeof(b)/sizeof(int)) << endl;
+    //cout << CompareTwoArray(a, c, sizeof(a)/sizeof(int), sizeof(c)/sizeof(int)) << endl;
+    //cout << CompareTwoArray(a, d, sizeof(a)/sizeof(int), sizeof(d)/sizeof(int)) << endl;
+
+    vector<int> iveca;
+    vector<int> ivecb;
+
+    int i = 0;
+    cout << "Now init vector a:" << endl;
+    while(cin >> i)
+        iveca.push_back(i);
+
+    cout << "Now init vector b:" << endl;
+    while(cin >> i)
+        ivecb.push_back(i);
+
+    cout << CompareTwoVector(iveca, ivecb) << endl;
 
     return 0;
 }
 
 bool CompareTwoArray(int a[], int b[], int la, int lb)
 {
-    cout << "la = " << la << "\tlb = " <<  lb << endl;
-
     //input check
     if(NULL == a || 
        NULL == b ||
        la <= 0   ||
        lb <= 0)
     {
-        cout << "return p1" << endl;
         return false;
     }
 
     if (la != lb)
     {
-        cout << "return p2" << endl;
         return false;
     }
 
     int i = 0;
-
-    for (int i; i < la; i++)
+    for (i = 0; i < la; i++)
     {
-        cout << "inloop:" << i << endl;
         if(a[i] != b[i])
             break;
     }
 
-    cout << "out loop: " << i << endl;
-
     if (i == la)
-    {    cout << "return p3" << endl;
+    {    
         return true;}
     else
     {
-        cout << "return p4" << endl;
         return false;}
 }
 
