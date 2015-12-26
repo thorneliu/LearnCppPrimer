@@ -93,6 +93,37 @@ void OutputTxlInfoMapping()
     }
 }
 
+void changeTheValueofMap()
+{
+    txlKey key1;
+    key1.cellIndex  = 1;
+    key1.phyPortNum = 1;
+
+    txlInfoMap::iterator it = txlInfoMapping.find(key1);
+    if (it != txlInfoMapping.end())
+    {
+        cout << "result1 found: txLDn = " << (it->second).txlDn << "\tpMax = " << (it->second).pMax << endl;
+
+        //if found, i am gonna change it.
+        (it->second).txlDn = "Changed to anthoer dn.";
+        (it->second).pMax  = 100;
+    }
+    else
+    {
+        cout << "key1 NOT found." << endl;
+    }
+
+    it = txlInfoMapping.find(key1);
+    if (it != txlInfoMapping.end())
+    {
+        cout << "NEW result1 found: txLDn = " << (it->second).txlDn << "\tpMax = " << (it->second).pMax << endl;
+    }
+    else
+    {
+        cout << "NEW key1 NOT found." << endl;
+    }
+}
+
 int main()
 {
     initTxLInfoList();
@@ -125,6 +156,7 @@ int main()
     {
         cout << "key2 NOT found." << endl;
     }
+    changeTheValueofMap();
 
     return 0;
 }
