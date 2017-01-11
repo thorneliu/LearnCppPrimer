@@ -2,16 +2,15 @@
 #include<string>
 
 using namespace std; 
-//using std::istream;
-//using std::ostream;
-
-string s;
 
 int main()
 {
-    string s2;
+    string name, color;
+    cout << "What's your name?" << endl;
+    cin >> name;
+    cout << "Hi, " << name << "! What's your favorate color?" << endl;
+    cin >> color;
+    cout << "It's " << color << "." << endl;
 
-    cout << s << endl;
-    cout << s2 << endl;
     return 0;
 }
