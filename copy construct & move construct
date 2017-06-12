@@ -1,0 +1,9 @@
+void someFunc(Widget w);        // someFunc's parameter w
+                                // is passed by value
+Widget wid;                     // wid is some Widget
+someFunc(wid);                  // in this call to someFunc,
+                                // w is a copy of wid that's
+                                // created via copy construction
+someFunc(std::move(wid));       // in this call to SomeFunc,
+                                // w is a copy of wid that's
+                                // created via move construction
